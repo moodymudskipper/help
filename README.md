@@ -9,7 +9,7 @@ list.
 Install with:
 
 ``` r
-remotes::install.github("moodymudskiper/help")
+remotes::install.github("moodymudskipper/help")
 ```
 
 ## Example
