@@ -64,6 +64,7 @@ split_arguments <- function(txt){
   values <- gsub("\\n"," ", values)
   values <- gsub("\\s+"," ", values)
   keys <- values[c(TRUE,FALSE)]
+  keys <- gsub("\\\\dots","...", keys)
   values <- values[c(FALSE, TRUE)]
   as.list(setNames(values, keys))
 }
