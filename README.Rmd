@@ -15,17 +15,12 @@ knitr::opts_chunk$set(
 
 # help
 
-<!-- badges: start -->
-<!-- badges: end -->
+The package *help* helps you get the content of your help files into a list.
 
-The goal of help is to ...
-
-## Installation
-
-You can install the released version of help from [CRAN](https://CRAN.R-project.org) with:
+Install with:
 
 ``` r
-install.packages("help")
+remotes::install.github("moodymudskiper/help")
 ```
 
 ## Example
@@ -33,22 +28,12 @@ install.packages("help")
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
-library(help)
-## basic example code
+# equivalent calls :
+# doc(base::mean)
+# doc(mean, "base")
+# doc("mean", "base")
+help::doc(mean)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
+Note that the output has been simplified from the `\\code{...}` etc that are
+found in the help files, to get the raw version set simplify to `FALSE`.
